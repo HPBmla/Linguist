@@ -16,7 +16,7 @@ public class imageUpload {
 
     public boolean uploadImage(String extnsn, String destn) {
         extension = extnsn;
-
+        System.out.println("bimla");
         return false;
 
     }
