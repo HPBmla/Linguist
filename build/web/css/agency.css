@@ -24,13 +24,13 @@ a.active {
     outline: none;
 }
 a {
-    color: #1E824C;
+    color: #1C86EE;
 }
 a:hover,
 a:focus,
 a:active,
 a.active {
-    color: #1abc9c;
+    color: #6495ED;
 }
 h1,
 h2,
@@ -97,8 +97,8 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-xl {
     color: #ffffff;
-    background-color: #1E824C;
-    border-color: #1E824C;
+    background-color: #1C86EE;
+    border-color: #1C86EE;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
@@ -112,7 +112,7 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
     color: #ffffff;
-    background-color: #1abc9c;
+    background-color: #63B8FF;
     border-color: #16a085;
 }
 .btn-xl:active,
@@ -175,22 +175,22 @@ fieldset[disabled] .btn-xl.active {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 1px;
-    color: white;
+    color: #1C86EE;
 }
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
-    color: #1E824C;
+    color: 	#5CACEE;
     outline: none;
 }
 .navbar-default .navbar-nav > .active > a {
     border-radius: 0;
     color: white;
-    background-color: #1E824C;
+    background-color: red;
 }
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
     color: white;
-    background-color: #1abc9c;
+    background-color: #63B8FF;
 }
 @media (min-width: 768px) {
     .navbar-default {
@@ -638,7 +638,7 @@ ul.social-buttons li a {
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-    background-color: #1E824C;
+    background-color: #1C86EE;
 }
 .btn:focus,
 .btn:active,
