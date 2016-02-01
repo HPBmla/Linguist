@@ -1,3 +1,13 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Feb 1, 2016, 1:53:22 AM
+    Author     : Bimla Madhavee
+*/
+
 @import url(http://fonts.googleapis.com/css?family=Cambay);
 body {
     overflow-x: hidden;
@@ -53,7 +63,7 @@ h6 {
 }
 .btn-primary {
     color: #ffffff;
-    background-color: #1E824C;
+    background-color: #1C86EE;
     border-color: #1E824C;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
