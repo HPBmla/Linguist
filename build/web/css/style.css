@@ -40,10 +40,43 @@ and open the template in the editor.
     cursor: inherit;
     display: block;
 }
+#imageView
+{
+    background-color: white;
+    height: 80px;
+    width: 100%;
+    alignment-adjust: central;
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+#display
+{
+    background-color: white;
+    max-height: 100%;
+    height: 500px;
+    width: 100%;
+    padding-right: 20%;
+    padding-left: 20%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    margin-bottom: 20px;
+
+}
+#inner-disply
+{
+    background-color:#838B83;
+    height: 400px;
+    width:100%;
+    max-height: 100%;
+
+
+}
 .btn-image{
     background-color: #1C86EE;
     color: #fff;
+    width: 100px;
 }
+
 .btn-image:hover{
     background-color: #63B8FF	;
 }
@@ -541,35 +574,13 @@ and open the template in the editor.
     color: #fff;
 }
 
-/*.header-text h2 {
-    font-size: 40px;
-}
 
-.header-text h2 span {
-    background-color: #2980b9;
-    padding: 10px;
-}
-
-.header-text h3 span {
-    background-color: #000;
-    padding: 15px;
-}*/
 
 .carousel-inner {
     border-radius: 15px;
 }
 
-/*.carousel-caption {
-    background-color: rgba(0,0,0,.5);
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
-    padding: 0 0 10px 25px;
-    color: #fff;
-    text-align: left;
-}*/
+
 
 .carousel-indicators {
     position: absolute;
@@ -716,5 +727,44 @@ and open the template in the editor.
 .white-bg{
     background:#ffffff !important;
 }
-\ No newline at end of file
+#servicePortion
+{
+    background-color: white;
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    padding-right: 20%;
+    padding-left: 20%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    margin-bottom: 20px;
+}
+#uploadSection
+{
+    background-color: white;
+    height: 45%;
+    width: 100%;
+    padding-right: 20%;
+    padding-left: 20%;
+    padding-bottom: 5%;
+    padding-top: 5%;
 
+}
+.textTitle
+{
+    color: black;
+}
+#uploadSuggest
+{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    padding-right: 20%;
+    padding-left: 20%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+#suggestHeading
+{
+    margin-bottom: 10%;
+}

@@ -13,8 +13,8 @@ body {
     overflow-x: hidden;
     font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.text-muted {
-    color: #777777;
+.textChanged {
+    color: black;
 }
 .text-primary {
     color: #1E824C;
@@ -51,12 +51,14 @@ h6 {
     font-family: "Cambay", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 600;
+
 }
 .img-centered {
     margin: 0 auto;
 }
 .bg-light-gray {
-    background-color: #f7f7f7;
+    //background-color: #f7f7f7;
+    background-color: #DCDCDC;
 }
 .bg-darkest-gray {
     background-color: #222222;
@@ -229,7 +231,7 @@ fieldset[disabled] .btn-xl.active {
     }
 }
 header {
-    background-image: url('../img/header-bg.jpg');
+    background-image: url('../img/coverImage.jpg');
     background-repeat: none;
     background-attachment: scroll;
     background-position: center center;
@@ -292,7 +294,7 @@ section h3.section-subheading {
     font-size: 16px;
     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: none;
-    font-style: italic;
+
     font-weight: 400;
     margin-bottom: 75px;
 }
@@ -301,9 +303,10 @@ section h3.section-subheading {
         padding: 150px 0;
     }
 }
-.service-heading {
+.serviceTitle{
     margin: 15px 0;
     text-transform: none;
+    color: black;
 }
 #portfolio .portfolio-item {
     margin: 0 0 15px;
@@ -582,6 +585,10 @@ section#contact .form-control:focus {
     border-color: #1E824C;
     box-shadow: none;
 }
+section#contact .form-control:hover
+{
+    border-color:#5CACEE;
+}
 section#contact ::-webkit-input-placeholder {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -741,4 +748,11 @@ img::-moz-selection {
 }
 body {
     webkit-tap-highlight-color: #1E824C;
+}
+#Extract-textarea
+{
+    border-color: #1c86ee;
+    resize: none;
+    max-height: 100%;
+
 }

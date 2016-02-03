@@ -1176,7 +1176,7 @@ h6,
     font-family: inherit;
     font-weight: 500;
     line-height: 1.1;
-    color: inherit;
+    color: black;
 }
 h1 small,
 h2 small,
@@ -3030,7 +3030,7 @@ fieldset[disabled] .btn {
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
     color: #333;
-    background-color: #e6e6e6;
+    background-color: #C6E2FF;
     border-color: #adadad;
 }
 .btn-default:active,
@@ -3110,7 +3110,7 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success {
     color: #fff;
-    background-color: #1C86EE;
+    background-color:#1C86EE;
     border-color: #4cae4c;
 }
 .btn-success:hover,
