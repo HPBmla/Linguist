@@ -8,18 +8,19 @@
 <!DOCTYPE html>
 <html>
     <!-- navigation-->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top" id="nav">
+        <div class="container" id="nav">
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><img src=" /img/logo/ViseurLogo.png"  alt="ViseurLogo"/></a>
             </div>
 
-            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse " id="nav">
                 <ul class="nav navbar-nav navbar-right ">
                     <li class="hidden">
                         <a href="#page-top"></a>
@@ -51,6 +52,7 @@
     <script src="/Linguist/js/jquery.min.js"></script>
     <script src="/Linguist/js/bootstrap-datepicker.js"></script>
     <script src="/Linguist/js/uploadimg.js"></script>
-
+    <script src="/Linguist/js/cbpAnimatedHeader.js"></script>
+    <script src="/Linguist/js/agency.js"></script>
 
 </html>

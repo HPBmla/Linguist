@@ -704,7 +704,7 @@ and open the template in the editor.
 }
 
 #about{
-    overflow: hidden;
+    //overflow: hidden;
     // background-color: #5CACEE;
 }
 
@@ -733,11 +733,11 @@ and open the template in the editor.
     max-height: 100%;
     height: 100%;
     width: 100%;
-    padding-right: 20%;
-    padding-left: 20%;
+    padding-right: 5%;
+    padding-left: 5%;
     padding-bottom: 5%;
     padding-top: 5%;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
 }
 #uploadSection
 {
@@ -753,6 +753,11 @@ and open the template in the editor.
 .textTitle
 {
     color: black;
+    // padding-left: 25%;
+}
+.communityTitle{
+    color: black;
+    padding-left: 50%;
 }
 #uploadSuggest
 {
@@ -761,10 +766,49 @@ and open the template in the editor.
     width: 100%;
     padding-right: 20%;
     padding-left: 20%;
-    padding-bottom: 5%;
+
     padding-top: 5%;
 }
 #suggestHeading
 {
     margin-bottom: 10%;
+}
+#nav
+{
+    background-color: black;
+}
+#community-click
+{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
+    margin-top: 0%;
+}
+#heading{
+    margin-bottom: 30%;
+}
+#headingService
+{
+    margin-bottom: 5%;
+}
+#block
+{
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+#block2
+{
+    margin-top: 5%;
+}
+#imageDis
+{
+    //margin-right: 2%;
+}
+#communityBlock
+{
+    margin-bottom: 0%;
 }

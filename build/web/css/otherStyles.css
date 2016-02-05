@@ -57,7 +57,7 @@ h6 {
     margin: 0 auto;
 }
 .bg-light-gray {
-    //background-color: #f7f7f7;
+
     background-color: #DCDCDC;
 }
 .bg-darkest-gray {
@@ -288,7 +288,7 @@ section {
 section h2.section-heading {
     font-size: 40px;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 0%;
 }
 section h3.section-subheading {
     font-size: 16px;
@@ -296,7 +296,7 @@ section h3.section-subheading {
     text-transform: none;
 
     font-weight: 400;
-    margin-bottom: 75px;
+    margin-bottom: 10px;
 }
 @media (min-width: 768px) {
     section {

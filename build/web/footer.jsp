@@ -5,8 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<footer>
-    <div class="container">
+<footer id="nav">
+    <div class="container" id="nav">
         <div class =" row">
             <div class="col-md-4">
 
