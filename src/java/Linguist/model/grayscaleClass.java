@@ -17,7 +17,7 @@ import org.opencv.imgproc.Imgproc;
 
 /**
  *
- * @author User
+ * @author Bimla Madhavee
  */
 public class grayscaleClass implements Preprocessable {
 
