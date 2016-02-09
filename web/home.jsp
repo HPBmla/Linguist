@@ -88,55 +88,57 @@
 <section id ="Community" class="bg-light-gray">
 
     <div id="community-click" class="container" >
-        <div id="communityBlock" class="row">
+        <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 id= "heading" class="section-heading communityTitle">Community</h2>
+                <div id="headingService">
+                    <h2 class="communityTitle">Community</h2>
+                </div>
+
 
             </div>
         </div>
-        <div class="row">
+        <div id="users" class="row">
             <div class="col-sm-4">
-                <div class="community-member">
-                    <img src="img/traveler.jpg" class=" img-responsive img-rounded" alt="travelers">
-                    <h4 class="well-sm" >Traveller</h4>
-                    <div  class="col-sm-4">
-                        <p class="text-muted">
-                            kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-                            kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-                            kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-                        </p>
-                    </div>
 
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="community-member">
-                    <img src="img/traveler.jpg" class=" img-responsive img-rounded" alt="travelers">
-                    <h4 class="well-sm" >Traveller</h4>
-
+                <img src="img/traveler.jpg" class=" img-responsive img-rounded" alt="travelers">
+                <h4 class="well-sm" >Traveller</h4>
+                <div id="users" class="col-sm-4">
                     <p class="text-muted">
-                        kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-                        kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-                        kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+                        kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+                        kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+                        kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
                     </p>
-
-
                 </div>
 
             </div>
-            <div class="col-sm-4">
-                <div class="community-member">
-                    <img src="img/traveler.jpg" class=" img-responsive img-rounded" alt="travelers">
-                    <h4 class="well-sm" >Traveller</h4>
+            <div id="users" class="col-sm-4">
 
-                    <p class="text-muted">
-                        kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-                        kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-                        kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-                    </p>
+                <img src="img/traveler.jpg" class=" img-responsive img-rounded" alt="travelers">
+                <h4 class="well-sm" >Traveller</h4>
+
+                <p class="text-muted">
+                    kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+                    kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+                    kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+                </p>
 
 
-                </div>
+
+
+            </div>
+            <div id="users" class="col-sm-4">
+
+                <img src="img/traveler.jpg" class=" img-responsive img-rounded" alt="travelers">
+                <h4 class="well-sm" >Traveller</h4>
+
+                <p class="text-muted">
+                    kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+                    kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+                    kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+                </p>
+
+
+
 
             </div>
 
@@ -144,70 +146,78 @@
     </div>
 </section>
 <section id="ocr"  class=" bg-light-gray ">
-    <div class="container ">
-        <div id ="uploadSection" class="center-block">
+    <div id ="uploadSection" class="container ">
+        <form action="UploadServlet" method="post" class=" form" role="form">
             <div id = "head" class="row " >
                 <h4 class="text-center textTitle">Upload an Image to be extracted</h4>
             </div>
-            <div id =" imageDisplay ">
+            <div id =" imageDisplay " class="row">
                 <div class=" col-md-6">
 
 
                     <span class="btn btn-image  btn-file pull-right">Upload
                         <input type="file" name="upldImge" id="extractimage">
+                        <input type="hidden" name="imgloc">
                     </span>
 
+
                 </div>
+
+
                 <div  id =" imageDisplay " class=" col-md-6">
 
 
 
-                    <a href="imageView.jsp" class= "btn btn-image pull-left">Preview</a>
+                    <input type="submit" class= "btn btn-image pull-left">Preview</a>
 
 
 
 
                 </div>
+            </div>
+        </form>
+    </div>
 
+</section>
+
+<section id="suggest" class="bg-light-gray">
+    <div class="container">
+        <div id="uploadSuggest" class="center-block">
+            <div id="suggestHeading" class="row">
+                <h4 class="textTitle center-block"> Send your suggestions to us</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-8 center-block">
+                    <p class="pull-left textTitle">Email Address</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <input class="form-control" type="text" name="emailAddress" value=""/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 center-block">
+                    <p class="pull-left textTitle">Suggestions related to the website</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+
+                    <textarea maxlength="50" class=" form-control " name="msg" rows="5" id="Extract-textarea" > </textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div id="imageView" class="col-md-8 ">
+                    <a  id="btn_padding" href="#download" class="btn btn-image pull-left">Suggest</a>
+                    <a id="btn_padding" href="#translate" class="btn btn-default pull-left">Cancel</a>
+                </div>
             </div>
         </div>
-        <section id="suggest">
-            <div id="uploadSuggest" class="center-block">
-                <div id="suggestHeading" class="row">
-                    <h4 class="textTitle center-block"> Send your suggestions to us</h4>
-                </div>
-                <div class="row">
-                    <div class="col-md-8 center-block">
-                        <p class="pull-left textTitle">Email Address</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <input class="form-control" type="text" name="emailAddress" value=""/>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8 center-block">
-                        <p class="pull-left textTitle">Suggestions related to the website</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-
-                        <textarea maxlength="50" class=" form-control " name="msg" rows="5" id="Extract-textarea" > </textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <div id="imageView" class="col-md-8 ">
-                        <a  id="btn_padding" href="#download" class="btn btn-image pull-left">Suggest</a>
-                        <a id="btn_padding" href="#translate" class="btn btn-default pull-left">Cancel</a>
-                    </div>
-                </div>
-            </div>
-
-        </section>
     </div>
 </section>
+
+
 
 
 
