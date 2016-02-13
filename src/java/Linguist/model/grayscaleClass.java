@@ -33,7 +33,7 @@ public class grayscaleClass implements Preprocessable {
         try {
 
             System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-            File fileName = new File("image");
+            File fileName = new File(image);
             bImge = ImageIO.read(fileName);
             byte[] imgeByte = ((DataBufferByte) bImge.getRaster().getDataBuffer()).getData();
             Mat mat1 = new Mat(bImge.getHeight(), bImge.getWidth(), CvType.CV_8UC3);

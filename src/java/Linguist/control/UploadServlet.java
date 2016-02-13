@@ -13,7 +13,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
 
 /**
  *
@@ -60,53 +59,54 @@ public class UploadServlet extends HttpServlet {
 
         PrintWriter out = response.getWriter();
 
-        /* boolean isMultipart = ServletFileUpload.isMultipartContent(request);
+        /*  if (!ServletFileUpload.isMultipartContent(request)) {
+         System.out.println("Nothing to upload ");
+         return;
+         }
 
-         if (isMultipart) {
          FileItemFactory factory = new DiskFileItemFactory();
          ServletFileUpload upload = new ServletFileUpload(factory);
 
          try {
-         List items = upload.parseRequest(request);
-         Iterator iterator = items.iterator();
-         while (iterator.hasNext()) {
-         FileItem item = (FileItem) iterator.next();
-
-         if (!item.isFormField()) {
-
-         String fileName = item.getName();
-         String root = getServletContext().getRealPath("/");
-
-         //path where the file will be stored
-         File path = new File("C:\\Users\\User\\Documents\\NetBeansProjects\\Linguist" + "/uploads");
-         if (!path.exists()) {
-         boolean status = path.mkdirs();
+         List<FileItem> items = upload.parseRequest(request);
+         for (FileItem item : items) {
+         File uploadDir = new File("F:\\image");
+         File file = File.createTempFile("img", ".jpg", uploadDir);
+         item.write(file);
+         System.out.println("upload  successfull");
          }
 
-         File uploadedFile = new File(path + "/" + fileName);
-         System.out.println(uploadedFile.getAbsolutePath());
-         item.write(uploadedFile);
-         }
-
-         }
          } catch (FileUploadException ex) {
-         Logger.getLogger(UploadServlet.class.getName()).log(Level.SEVERE, null, ex);
+         System.out.println("upload not successfull");
          } catch (Exception ex) {
          Logger.getLogger(UploadServlet.class.getName()).log(Level.SEVERE, null, ex);
-         } */
+         }*/
         /**
          * Returns a short description of the servlet.
          *
          * @return a String containing servlet description
          */
-        Part partImage = request.getPart("upldImge");
-        String destination = "C:\\Users\\User\\Documents\\NetBeansProjects\\Linguist";
-        String extension = "jpg";
-        imageUpload upload = new imageUpload();
-        boolean flag = upload.uploadImage(partImage);
+        /* Part partImage = request.getPart("upldImge");
+         String destination = "C:\\Users\\User\\Documents\\NetBeansProjects\\Linguist";
+         String extension = "jpg";
+         imageUpload upload = new imageUpload();
+         boolean flag = upload.uploadImage(partImage);
+         if (flag == true) {
+         System.out.print("successfull");
+         }
+         getServletContext().getRequestDispatcher("imageView.jsp").forward(request, response);*/
+        /**
+         *
+         * last method
+         *
+         */
+        String uploadedImage = request.getParameter("upldImge");
+        imageUpload image = new imageUpload();
+        boolean flag = image.uploadImge(uploadedImage, "jpg");
         if (flag == true) {
-            System.out.print("successfull");
+            out.println("<html><body onload=\"alert('Image uploaded successful')\"></body></html>");
+        } else {
+            out.println("<html><body onload=\"alert('Image not uploaded successful')\"></body></html>");
         }
-        getServletContext().getRequestDispatcher("imageView.jsp").forward(request, response);
     }
 }

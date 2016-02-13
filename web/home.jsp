@@ -11,9 +11,9 @@
 <link href="/Linguist/css/otherStyles.css" rel="stylesheet">
 <script src="/Linguist/js/bootstrap.min.js"></script>
 <script src="/Linguist/js/jquery.min.js"></script>
-<script src="/Linguist/js/bootstrap-datepicker.js"></script>
-<script src="/Linguist/js/uploadimg.js"></script>
-<script src="/Linguist/js/agency.js"></script>
+
+
+
 
 
 <%@include file="navigationBar.jsp" %>
@@ -147,7 +147,7 @@
 </section>
 <section id="ocr"  class=" bg-light-gray ">
     <div id ="uploadSection" class="container ">
-        <form action="UploadServlet" method="post" class=" form" role="form">
+        <form action="UploadServlet" method="post" class=" form" role="form" enctype="multipart/form-data">
             <div id = "head" class="row " >
                 <h4 class="text-center textTitle">Upload an Image to be extracted</h4>
             </div>
@@ -157,7 +157,7 @@
 
                     <span class="btn btn-image  btn-file pull-right">Upload
                         <input type="file" name="upldImge" id="extractimage">
-                        <input type="hidden" name="imgloc">
+
                     </span>
 
 

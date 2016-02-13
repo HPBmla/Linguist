@@ -50,9 +50,9 @@
     <link href="/Linguist/css/otherStyles.css" rel="stylesheet">
     <script src="/Linguist/js/bootstrap.min.js"></script>
     <script src="/Linguist/js/jquery.min.js"></script>
-    <script src="/Linguist/js/bootstrap-datepicker.js"></script>
-    <script src="/Linguist/js/uploadimg.js"></script>
-    <script src="/Linguist/js/cbpAnimatedHeader.js"></script>
-    <script src="/Linguist/js/agency.js"></script>
+
+
+
+
 
 </html>

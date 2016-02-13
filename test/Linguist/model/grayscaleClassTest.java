@@ -5,10 +5,10 @@
  */
 package Linguist.model;
 
+import java.io.File;
 import org.junit.After;
 import org.junit.AfterClass;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -17,9 +17,9 @@ import org.junit.Test;
  *
  * @author User
  */
-public class imageUploadTest {
+public class grayscaleClassTest {
 
-    public imageUploadTest() {
+    public grayscaleClassTest() {
     }
 
     @BeforeClass
@@ -39,31 +39,19 @@ public class imageUploadTest {
     }
 
     /**
-     * Test of uploadImage method, of class imageUpload.
-     */
-    /*   @Test
-     public void testUploadImage() {
-     System.out.println("uploadImage");
-     Part imgPart = null;
-     imageUpload instance = new imageUpload();
-
-     boolean result = instance.uploadImage(imgPart);
-     assertTrue(result);
-
-     }*/
-    /**
-     * Test of getExtensn method, of class imageUpload.
+     * Test of imagePreprocessing method, of class grayscaleClass.
      */
     @Test
-    public void testGetExtensn() {
-        System.out.println("getExtensn");
-        String filenme = "";
-        imageUpload instance = new imageUpload();
-        String expResult = "";
-        String result = instance.getExtensn(filenme);
+    public void testImagePreprocessing() {
+        System.out.println("imagePreprocessing");
+        String image = "pink.jpg";
+        grayscaleClass instance = new grayscaleClass();
+        String exp = "gray.jpg";
+        File expResult = new File(exp);
+        File result = instance.imagePreprocessing(image);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
 }
