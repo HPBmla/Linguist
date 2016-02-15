@@ -3,22 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Linguist.control;
+package com.Linguist.control;
 
-import Linguist.model.imageUpload;
+import com.Linguist.model.imageUpload;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 /**
  *
  * @author User
  */
 @WebServlet(name = "UploadServlet", urlPatterns = {"/UploadServlet"})
+@MultipartConfig
 public class UploadServlet extends HttpServlet {
 
     /**
@@ -100,9 +104,15 @@ public class UploadServlet extends HttpServlet {
          * last method
          *
          */
-        String uploadedImage = request.getParameter("upldImge");
+        Part uploadedImage = request.getPart("image");
+        String filename = uploadedImage.getSubmittedFileName();
+
+        out.println(filename);
+        InputStream filecontent = uploadedImage.getInputStream();
         imageUpload image = new imageUpload();
-        boolean flag = image.uploadImge(uploadedImage, "jpg");
+        String extnsn = image.getExtensn(filename);
+        out.println(extnsn);
+        boolean flag = image.imageInputstream(filecontent, extnsn, filename);
         if (flag == true) {
             out.println("<html><body onload=\"alert('Image uploaded successful')\"></body></html>");
         } else {

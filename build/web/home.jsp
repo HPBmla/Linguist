@@ -156,7 +156,7 @@
 
 
                     <span class="btn btn-image  btn-file pull-right">Upload
-                        <input type="file" name="upldImge" id="extractimage">
+                        <input type="file" name="image" id="extractimage">
 
                     </span>
 
@@ -176,6 +176,16 @@
                 </div>
             </div>
         </form>
+        <!--  <form action="UploadServlet" method="post" enctype="multipart/form-data">
+              <div class="row">
+                  <input type="file" name="image">
+              </div>
+              <div class="row">
+                  <input type="submit" value="submit">
+              </div>
+
+
+          </form>-->
     </div>
 
 </section>

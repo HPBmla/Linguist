@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Linguist.model;
+package com.Linguist.model;
 
+import com.Linguist.model.grayscaleClass;
 import java.io.File;
 import org.junit.After;
 import org.junit.AfterClass;

@@ -87,48 +87,9 @@ img .img-file-thumb{
 
 }
 
-#uploadicon{
-    height: 140px;
-    width: 140px;
-    padding: 0;
-}
-#uploadicon_btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center
-
-}
-
-img #display-header-img{
-    min-height: 200px;
-}
-
-
-#proj-thumnail-icon-slider{
-    width: 50px; height: 50px;
-}
-.proj-thumnail-icon{
-    width: 50px; height: 50px;
-}
-/* End of Iamge upoad Icons */
-
-/*custom input */
-.nicEdit-main{
-    background-color: white;
-}
-
-/* end of custom input */
-
 .form-control { margin-bottom: 20px; }
 
-input.form-control {}
 
-.input-group{ /* margin-bottom: 20px; */}
-
-.btn-group{margin-bottom: 20px;}
 
 legend .glyphicon { margin-left: 10px; margin-right: 10px; font-size: 90% ;}
 #head{
@@ -146,37 +107,12 @@ legend .glyphicon { margin-left: 10px; margin-right: 10px; font-size: 90% ;}
     margin-top: -0.8em;
 }
 
-/* Pick Level JSP page CSS */
 
-.custom-overflow{
-    font-size: smaller;  overflow-style: scrollbar;   overflow-y: auto;
-}
 
-.custom-list-a{
-    height: 120px; max-height: 120px;
-}
-
-.custom-list-b{
-    height: 220px; min-height: 220px; max-height: 220px;
-}
-
-#step-2-form{
-    display: none;
-}
-
-/* Pick Level JSP page options : End */
-
-/* Navbar Form overring bootstrap CSS */
-.navbar-form {
-    padding:  10px 10px;
-    margin-top: 2px; // 8px
-    margin-bottom: 0; //8px
-}
-
-.nav .navbar-form .input-group{
+.nav{
     margin-bottom: 0;
 }
-/* Navbar : End */
+
 
 .box {
     overflow:auto;
@@ -186,29 +122,10 @@ legend .glyphicon { margin-left: 10px; margin-right: 10px; font-size: 90% ;}
     display: block;
     padding: 4px;
 }
-.box-icon {
-    background-color: #57a544;
-    border-radius: 50%;
-    display: table;
-    height: 100px;
-    margin: 0 auto;
-    width: 100px;
-    margin-top: 55px;
-    margin-bottom: 55px;
-}
-.box-icon span {
-    color: #fff;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-}
 
 
-.info h4 {
-    font-size: 26px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
+
+
 .info > p {
     color: #717171;
     font-size: 16px;
@@ -229,325 +146,6 @@ legend .glyphicon { margin-left: 10px; margin-right: 10px; font-size: 90% ;}
     transition: all 0.5s ease 0s;
 }
 
-#page_top_bottom_gap{
-    margin-bottom: 100px;
-    margin-top: 100px;
-}
-
-#page_top_bottom_gap > label{
-    color: #22A7F0;
-}
-
-/* Tabs panel */
-.tabbable-panel {
-    border:1px solid #eee;
-    padding: 10px;
-}
-
-/* Default mode */
-.tabbable-line > .nav-tabs {
-    border: none;
-    margin: 0px;
-}
-.tabbable-line > .nav-tabs > li {
-    margin-right: 2px;
-}
-.tabbable-line > .nav-tabs > li > a {
-    border: 0;
-    margin-right: 0;
-    color: #737373;
-}
-.tabbable-line > .nav-tabs > li > a > i {
-    color: #a6a6a6;
-}
-.tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
-    border-bottom: 4px solid #fbcdcf;
-}
-.tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
-    border: 0;
-    background: none !important;
-    color: #333333;
-}
-.tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
-    color: #a6a6a6;
-}
-.tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
-    margin-top: 0px;
-}
-.tabbable-line > .nav-tabs > li.active {
-    border-bottom: 4px solid #f3565d;
-    position: relative;
-}
-.tabbable-line > .nav-tabs > li.active > a {
-    border: 0;
-    color: #333333;
-}
-.tabbable-line > .nav-tabs > li.active > a > i {
-    color: #404040;
-}
-.tabbable-line > .tab-content {
-    margin-top: -3px;
-    background-color: #fff;
-    border: 0;
-    border-top: 1px solid #eee;
-    padding: 15px 0;
-}
-.portlet .tabbable-line > .tab-content {
-    padding-bottom: 0;
-}
-
-/* Below tabs mode */
-
-.tabbable-line.tabs-below > .nav-tabs > li {
-    border-top: 4px solid transparent;
-}
-.tabbable-line.tabs-below > .nav-tabs > li > a {
-    margin-top: 0;
-}
-.tabbable-line.tabs-below > .nav-tabs > li:hover {
-    border-bottom: 0;
-    border-top: 4px solid #fbcdcf;
-}
-.tabbable-line.tabs-below > .nav-tabs > li.active {
-    margin-bottom: -2px;
-    border-bottom: 0;
-    border-top: 4px solid #f3565d;
-}
-.tabbable-line.tabs-below > .tab-content {
-    margin-top: -10px;
-    border-top: 0;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 15px;
-}
-
-/* -------------timeline-------------*/
-
-.message-item {
-    margin-bottom: 25px;
-    margin-left: 40px;
-    position: relative;
-}
-.message-item .message-inner {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    padding: 10px;
-    position: relative;
-}
-.message-item .message-inner:before {
-    border-right: 10px solid #ddd;
-    border-style: solid;
-    border-width: 10px;
-    color: rgba(0,0,0,0);
-    content: "";
-    display: block;
-    height: 0;
-    position: absolute;
-    left: -20px;
-    top: 6px;
-    width: 0;
-}
-.message-item .message-inner:after {
-    border-right: 10px solid #fff;
-    border-style: solid;
-    border-width: 10px;
-    color: rgba(0,0,0,0);
-    content: "";
-    display: block;
-    height: 0;
-    position: absolute;
-    left: -18px;
-    top: 6px;
-    width: 0;
-}
-.message-item:before {
-    background: #fff;
-    border-radius: 2px;
-    bottom: -30px;
-    box-shadow: 0 0 3px rgba(0,0,0,0.2);
-    content: "";
-    height: 100%;
-    left: -30px;
-    position: absolute;
-    width: 3px;
-}
-.message-item:after {
-    background: #fff;
-    border: 2px solid #ccc;
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    content: "";
-    height: 15px;
-    left: -36px;
-    position: absolute;
-    top: 10px;
-    width: 15px;
-}
-.clearfix:before, .clearfix:after {
-    content: " ";
-    display: table;
-}
-.message-item .message-head {
-    border-bottom: 1px solid #eee;
-    margin-bottom: 8px;
-    padding-bottom: 8px;
-}
-.message-item .message-head .avatar {
-    margin-right: 20px;
-}
-.message-item .message-head .user-detail {
-    overflow: hidden;
-}
-.message-item .message-head .user-detail h5 {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0;
-}
-.message-item .message-head .post-meta {
-    float: left;
-    padding: 0 15px 0 0;
-}
-.message-item .message-head .post-meta >div {
-    color: #333;
-    font-weight: bold;
-    text-align: right;
-}
-.post-meta > div {
-    color: #777;
-    font-size: 12px;
-    line-height: 22px;
-}
-.message-item .message-head .post-meta >div {
-    color: #333;
-    font-weight: bold;
-    text-align: right;
-}
-.post-meta > div {
-    color: #777;
-    font-size: 12px;
-    line-height: 22px;
-}
-
-img {
-    /* min-height: 40px; */
-    /* max-height: 40px; */
-}
-#page_top_bottom_gap_error{
-    margin-top: 5px;
-
-}
-
-#marginBottom{
-    margin-bottom: 25px;
-}
-
-#marginTop{
-    margin-top: 25px;
-}
-#navbarDropDown{
-    margin-top: 6px;
-}
-#navbarNotifi{
-    width: 468px; padding: 5px;
-    margin-top: 6px;
-}
-
-#level3Start{
-    width: auto;
-    height: 350px;
-    overflow: hidden;
-}
-
-.errorfont{
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-    color: #FF0000;
-    font-size: 60px;
-    padding: 0;
-    text-transform: uppercase;
-}
-
-/* ------------------------ */
-
-/*
-    Note: It is best to use a less version of this file ( see http://css2less.cc
-    For the media queries use @screen-sm-min instead of 768px.
-    For .omb_spanOr use @body-bg instead of white.
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : Feb 1, 2016, 1:32:36 AM
-    Author     : Bimla Madhavee
-*/
-
-@media (min-width: 768px) {
-    .omb_row-sm-offset-3 div:first-child[class*="col-"] {
-        margin-left: 25%;
-    }
-}
-
-.omb_login .omb_authTitle {
-    text-align: center;
-    line-height: 300%;
-}
-
-.omb_login .omb_socialButtons a {
-    color: white; // In yourUse @body-bg
-    opacity:0.9;
-}
-.omb_login .omb_socialButtons a:hover {
-    color: blue;
-    opacity:1;
-}
-.omb_login .omb_socialButtons .omb_btn-facebook {background: blue;}
-.omb_login .omb_socialButtons .omb_btn-twitter {background: #00aced;}
-.omb_login .omb_socialButtons .omb_btn-google {background: #c32f10;}
-
-
-.omb_login .omb_loginOr {
-    position: relative;
-    font-size: 1.5em;
-    color: #aaa;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-}
-.omb_login .omb_loginOr .omb_hrOr {
-    background-color: #cdcdcd;
-    height: 1px;
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-}
-.omb_login .omb_loginOr .omb_spanOr {
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: -0.6em;
-    margin-left: -1.5em;
-    background-color: white;
-    width: 3em;
-    text-align: center;
-}
-
-.omb_login .omb_loginForm .input-group.i {
-    width: 2em;
-}
-.omb_login .omb_loginForm  .help-block {
-    color: red;
-}
-
-
-@media (min-width: 768px) {
-    .omb_login .omb_forgotPwd {
-        text-align: right;
-        margin-top:10px;
-    }
-}
-
-/* ------- carousel ---------- */
-/* Makes images fully responsive */
 
 .img-responsive,
 .thumbnail > img,
@@ -555,69 +153,7 @@ and open the template in the editor.
     width: 100%;
     height: auto;
 }
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
 
-    width: 100%;
-    height: 350px;
-}
-
-/* ------------------- Carousel Styling ------------------- */
-
-/* Carousel Header Styles */
-.header-text {
-    position: absolute;
-    top: 20%;
-    left: 1.8%;
-    right: auto;
-    width: 96.66666666666666%;
-    color: #fff;
-}
-
-
-
-.carousel-inner {
-    border-radius: 15px;
-}
-
-
-
-.carousel-indicators {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    z-index: 15;
-    margin: 0;
-    padding: 0 25px 25px 0;
-    text-align: right;
-}
-
-.carousel-control.left,
-.carousel-control.right {
-    background-image: none;
-}
-
-
-/* ------------------- Section Styling - Not needed for carousel styling ------------------- */
-
-.section-white {
-    padding: 10px 0;
-}
-
-.section-white {
-    background-color: #fff;
-    color: #555;
-}
-
-@media screen and (min-width: 768px) {
-
-    .section-white {
-        padding: 1.5em 0;
-    }
-
-}
 
 @media screen and (min-width: 992px) {
 
@@ -625,82 +161,6 @@ and open the template in the editor.
         max-width: 930px;
     }
 
-}
-
-.project_intro{
-    margin-top: 10px;
-}
-
-#proj_container *.a{
-    border-radius: 22px 22px 22px 22px;
-    -moz-border-radius: 22px 22px 22px 22px;
-    -webkit-border-radius: 22px 22px 22px 22px;
-    border: 1px solid #000000;
-}
-
-#ProjectSlides img {
-    width: auto;
-    height: 490px;
-    max-height: 490px;
-    padding: 0;
-}
-
-#ProjectSlides iframe {
-
-    height: 490px;
-    max-height: 490px;
-    padding: 0;
-}
-
-.idea_price > p{
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-    color: #4183D7;
-    font-size: 40px;
-    padding: 0;
-    text-transform: uppercase;
-}
-
-#dealBtnStyle{
-    padding: 10px;
-}
-
-#idea_desc_style{
-    background-color: #ecf0f1;
-    padding: 5px;
-}
-
-.idea_desc{
-    text-decoration: none;
-    width: inherit;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    height: 48px;
-}
-
-
-
-.text_warap{
-    text-decoration: none;
-    width: inherit;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.text_warap > a{
-    text-decoration: none;
-}
-
-.mod{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-}
-
-.mod a{
-    text-decoration : none;
 }
 
 #about{
@@ -712,21 +172,6 @@ and open the template in the editor.
     margin: 5px;
 }
 
-#Refund,
-#overview,
-#archiveItem,
-#digest{
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-.viewpro > a{
-    margin: 10px 0;
-}
-
-.white-bg{
-    background:#ffffff !important;
-}
 #servicePortion
 {
     background-color: white;
