@@ -168,7 +168,7 @@
 
 
 
-                    <input type="submit" class= "btn btn-image pull-left">Preview</a>
+                    <input type="submit" class= "btn btn-image pull-left">
 
 
 

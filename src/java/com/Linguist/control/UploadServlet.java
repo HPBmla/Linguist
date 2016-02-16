@@ -105,6 +105,7 @@ public class UploadServlet extends HttpServlet {
          *
          */
         Part uploadedImage = request.getPart("image");
+
         String filename = uploadedImage.getSubmittedFileName();
 
         out.println(filename);
@@ -118,5 +119,10 @@ public class UploadServlet extends HttpServlet {
         } else {
             out.println("<html><body onload=\"alert('Image not uploaded successful')\"></body></html>");
         }
+
+        //returning name of the image to another jsp page
+        request.setAttribute(" name ", filename);
+        request.getRequestDispatcher("imageView.jsp").forward(request, response);
+
     }
 }

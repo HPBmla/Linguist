@@ -41,25 +41,24 @@ public class imageUpload {
         return extn;
     }
 
-    public boolean uploadImge(String image, String extns) {
-        boolean flag = false;
-        try {
+    /*  public boolean uploadImge(String image, String extns) {
+     boolean flag = false;
+     try {
 
-            File imageFile = new File(image + "." + extns);
-            File path = new File("/web/img" + imageFile);
-            BufferedImage buffImage = ImageIO.read(imageFile);
-            System.out.println("writing the image");
-            flag = ImageIO.write(buffImage, "jpg", path);
-            if (flag == true) {
-                System.out.println("hurrayy");
-            }
+     File imageFile = new File(image + "." + extns);
+     File path = new File("/web/img" + imageFile);
+     BufferedImage buffImage = ImageIO.read(imageFile);
+     System.out.println("writing the image");
+     flag = ImageIO.write(buffImage, "jpg", path);
+     if (flag == true) {
+     System.out.println("hurrayy");
+     }
 
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-        return flag;
-    }
-
+     } catch (IOException ex) {
+     ex.printStackTrace();
+     }
+     return flag;
+     }*/
     public boolean imageInputstream(InputStream imgePrt, String extension, String name) {
         boolean flag = false;
         try {
