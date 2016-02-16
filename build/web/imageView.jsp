@@ -4,6 +4,8 @@
     Author     : Bimla Madhavee
 --%>
 
+<%@page import="javax.swing.JOptionPane"%>
+<%@page import="java.io.File"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,19 +23,27 @@
         <div class="container ">
             <div class="row ">
                 <div  id = "imageView" class="col-lg-8 center-block ">
-                    <a href="imageExtract.jsp" class="page-scroll btn btn-image">OCR</a>
+                    <form action="ImagePreprocess" method="post" class=" form" role="form" enctype="multipart/form-data">
+                        <input type="submit" class= "btn btn-image pull-left" value="OCR">
+                    </form>
+
                     <a href="home.jsp" class="btn btn-default bg-light-gray">Upload a new Image</a>
 
                 </div>
 
             </div>
-
+            <%
+                String fname = (String) request.getAttribute(" name ");
+                session.setAttribute("filename", fname);
+            %>
 
             <div class="row">
-                <div  id = "display" class="col-lg-8 center-block ">
-                    <div id ="inner-disply" class=" col-lg-8 center-block ">
+                <div  id = "display" class="col-lg-8 center-block "><img src="C:\Users\User\Documents\GitHub\Linguist\uploadedImage\<%=fname%>" width="300" height="500" alt="image"/>
 
-                    </div>
+                    <!--    <div id ="inner-disply" class=" col-lg-8 center-block " ><img src= "pink.jpg" height ="300" width="400"/>
+
+</div>-->
+                    <p> <%=fname%>
                 </div>
 
             </div>
