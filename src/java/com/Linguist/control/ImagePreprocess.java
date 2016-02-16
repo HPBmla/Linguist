@@ -58,6 +58,8 @@ public class ImagePreprocess extends HttpServlet {
         File outputGrayImage = grayImage.imagePreprocessing(imageName);
         if (outputGrayImage != null) {
             out.println("<html><body onload=\"alert('Image uploaded successful')\"></body></html>");
+        } else {
+            out.println("<html><body onload=\"alert('Image not successful')\"></body></html>");
         }
     }
 

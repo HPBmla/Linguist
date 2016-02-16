@@ -10,7 +10,6 @@ import java.awt.image.DataBufferByte;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
-import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.imgproc.Imgproc;
@@ -32,7 +31,7 @@ public class grayscaleClass implements Preprocessable {
         File grayscle = null;
         try {
 
-            System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+            System.loadLibrary("opencv_java300");
             File fileName = new File(image);
             bImge = ImageIO.read(fileName);
             byte[] imgeByte = ((DataBufferByte) bImge.getRaster().getDataBuffer()).getData();
