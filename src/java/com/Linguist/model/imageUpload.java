@@ -17,9 +17,6 @@ import javax.imageio.ImageIO;
  */
 public class imageUpload {
 
-    public String destinatn = "img\\";
-    public String extension;
-
     /*  public boolean uploadImage(Part imgPart) {
 
      //extension = extnsn;
@@ -62,7 +59,7 @@ public class imageUpload {
     public boolean imageInputstream(InputStream imgePrt, String extension, String name) {
         boolean flag = false;
         try {
-            File path = new File("C:\\Users\\User\\Documents\\GitHub\\Linguist\\uploadedImage\\" + name);
+            File path = new File("C:\\Users\\User\\Documents\\GitHub\\Linguist\\web\\uploadedImage\\" + name);
             BufferedImage bufImage = ImageIO.read(imgePrt);
             String extn = null;
             switch (extension) {

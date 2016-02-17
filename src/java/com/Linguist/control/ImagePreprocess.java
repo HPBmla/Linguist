@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,6 +22,7 @@ import javax.servlet.http.HttpSession;
  * @author Bimla Madhavee
  */
 @WebServlet(name = "ImagePreprocess", urlPatterns = {"/ImagePreprocess"})
+@MultipartConfig
 public class ImagePreprocess extends HttpServlet {
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -53,10 +55,14 @@ public class ImagePreprocess extends HttpServlet {
         PrintWriter out = response.getWriter();
         HttpSession fileNameSession = request.getSession();
         String imageName = (String) fileNameSession.getAttribute("filename");
+        out.print(imageName);
         grayscaleClass grayImage = new grayscaleClass();
-
+        File fileNme = new File(imageName);
         File outputGrayImage = grayImage.imagePreprocessing(imageName);
         if (outputGrayImage != null) {
+            /*   BufferedImage gray = ImageIO.read(fileNme);
+             File outImge = new File("grayImage.jpg");
+             ImageIO.write(gray, "jpg", outImge);*/
             out.println("<html><body onload=\"alert('Image uploaded successful')\"></body></html>");
         } else {
             out.println("<html><body onload=\"alert('Image not successful')\"></body></html>");
@@ -68,9 +74,4 @@ public class ImagePreprocess extends HttpServlet {
      *
      * @return a String containing servlet description
      */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
 }

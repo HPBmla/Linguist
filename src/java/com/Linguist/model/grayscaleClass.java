@@ -9,6 +9,9 @@ import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Field;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
@@ -30,7 +33,7 @@ public class grayscaleClass implements Preprocessable {
         BufferedImage bImge, bImage2 = null;
         File grayscle = null;
         try {
-
+            // loadOpenCV_Lib();
             System.loadLibrary("opencv_java300");
             File fileName = new File(image);
             bImge = ImageIO.read(fileName);
@@ -42,7 +45,7 @@ public class grayscaleClass implements Preprocessable {
             byte[] imageData = new byte[mat2.rows() * mat2.cols() * (int) (mat2.elemSize())];
             mat2.get(0, 0, imageData);
             bImage2 = new BufferedImage(mat2.rows(), mat2.cols(), BufferedImage.TYPE_BYTE_GRAY);
-            bImage2.getRaster().setDataElements(0, 0, mat2.rows(), mat2.cols(), imageData);
+            bImage2.getRaster().setDataElements(0, 0, mat2.cols(), mat2.rows(), imageData);
 
             //getting the extension of the image
             imageUpload extnsion = new imageUpload();
@@ -52,9 +55,24 @@ public class grayscaleClass implements Preprocessable {
             ImageIO.write(bImage2, extn, grayscle);
         } catch (IOException ex) {
             System.out.println("" + ex.getMessage());
+        } catch (Exception ex) {
+            Logger.getLogger(grayscaleClass.class.getName()).log(Level.SEVERE, null, ex);
         }
         return grayscle;
 
+    }
+
+    public static void loadOpenCV_Lib() throws Exception {
+        String model = System.getProperty("sun.arch.data.model");
+        String libraryPath = "C:/opencv/build/java/x64/";
+        if (model.equals("64")) {
+            libraryPath = "C:/opencv/build/java/x86/";
+        }
+        System.setProperty("java.library.path", libraryPath);
+        Field sysPath = ClassLoader.class.getDeclaredField("sys_paths");
+        sysPath.setAccessible(true);
+        sysPath.set(null, null);
+        //  System.loadLibrary("opencv_java300");
     }
 
 }

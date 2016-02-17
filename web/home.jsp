@@ -8,7 +8,7 @@
 <link href="/Linguist/css/bootstrap.css" rel="stylesheet">
 <link href="/Linguist/css/bootstrap.min.css" rel="stylesheet">
 <link href="/Linguist/css/otherStyle.css" rel="stylesheet">
-<link href="/Linguist/css/otherStyles.css" rel="stylesheet">
+
 <script src="/Linguist/js/bootstrap.min.js"></script>
 <script src="/Linguist/js/jquery.min.js"></script>
 

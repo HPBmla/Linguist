@@ -6,9 +6,11 @@
 package com.Linguist.control;
 
 import com.Linguist.model.imageUpload;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -63,56 +65,20 @@ public class UploadServlet extends HttpServlet {
 
         PrintWriter out = response.getWriter();
 
-        /*  if (!ServletFileUpload.isMultipartContent(request)) {
-         System.out.println("Nothing to upload ");
-         return;
-         }
-
-         FileItemFactory factory = new DiskFileItemFactory();
-         ServletFileUpload upload = new ServletFileUpload(factory);
-
-         try {
-         List<FileItem> items = upload.parseRequest(request);
-         for (FileItem item : items) {
-         File uploadDir = new File("F:\\image");
-         File file = File.createTempFile("img", ".jpg", uploadDir);
-         item.write(file);
-         System.out.println("upload  successfull");
-         }
-
-         } catch (FileUploadException ex) {
-         System.out.println("upload not successfull");
-         } catch (Exception ex) {
-         Logger.getLogger(UploadServlet.class.getName()).log(Level.SEVERE, null, ex);
-         }*/
-        /**
-         * Returns a short description of the servlet.
-         *
-         * @return a String containing servlet description
-         */
-        /* Part partImage = request.getPart("upldImge");
-         String destination = "C:\\Users\\User\\Documents\\NetBeansProjects\\Linguist";
-         String extension = "jpg";
-         imageUpload upload = new imageUpload();
-         boolean flag = upload.uploadImage(partImage);
-         if (flag == true) {
-         System.out.print("successfull");
-         }
-         getServletContext().getRequestDispatcher("imageView.jsp").forward(request, response);*/
-        /**
-         *
-         * last method
-         *
-         */
         Part uploadedImage = request.getPart("image");
 
         String filename = uploadedImage.getSubmittedFileName();
+        String path = "C:\\Users\\User\\Documents\\GitHub\\Linguist\\web\\uploadedImage\\" + filename;
 
-        out.println(filename);
+        File pathName = new File(path);
+        // String fileAbsName = pathName.getAbsolutePath();
+        request.setAttribute("name", filename);
+        // out.println(filename);
+        // out.println(pathName.getPath());
         InputStream filecontent = uploadedImage.getInputStream();
         imageUpload image = new imageUpload();
         String extnsn = image.getExtensn(filename);
-        out.println(extnsn);
+        //  out.println(extnsn);
         boolean flag = image.imageInputstream(filecontent, extnsn, filename);
         if (flag == true) {
             out.println("<html><body onload=\"alert('Image uploaded successful')\"></body></html>");
@@ -121,8 +87,8 @@ public class UploadServlet extends HttpServlet {
         }
 
         //returning name of the image to another jsp page
-        request.setAttribute(" name ", filename);
-        request.getRequestDispatcher("imageView.jsp").forward(request, response);
-
+        RequestDispatcher rd = request.getRequestDispatcher("/imageView.jsp");
+        rd.forward(request, response);
+        // response.sendRedirect("/Linguist/imageView.jsp");
     }
 }

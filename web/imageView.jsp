@@ -10,13 +10,12 @@
 <!DOCTYPE html>
 <html>
     <link href="/Linguist/css/bootstrap.css" rel="stylesheet">
-    <link href="/Linguist/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="/Linguist/css/style.css" rel="stylesheet">
     <link href="/Linguist/css/otherStyles.css" rel="stylesheet">
     <script src="/Linguist/js/bootstrap.min.js"></script>
     <script src="/Linguist/js/jquery.min.js"></script>
-    <script src="/Linguist/js/bootstrap-datepicker.js"></script>
-    <script src="/Linguist/js/uploadimg.js"></script>
+
 
     <%@include file="navigationBar.jsp" %>
     <section class="bg-light-gray">
@@ -33,17 +32,22 @@
 
             </div>
             <%
-                String fname = (String) request.getAttribute(" name ");
+                String fname = (String) request.getAttribute("name");
                 session.setAttribute("filename", fname);
+                String path = "";
+                if (request.getAttribute("name") != null) {
+                    path = request.getAttribute("name").toString();
+                }
             %>
 
             <div class="row">
-                <div  id = "display" class="col-lg-8 center-block "><img src="C:\Users\User\Documents\GitHub\Linguist\uploadedImage\<%=fname%>" width="300" height="500" alt="image"/>
+                <div  id = "display" class="col-lg-8 center-block "><img src="uploadedImage/<%=fname%>" width="600" height="400"/>
+
 
                     <!--    <div id ="inner-disply" class=" col-lg-8 center-block " ><img src= "pink.jpg" height ="300" width="400"/>
 
 </div>-->
-                    <p> <%=fname%>
+
                 </div>
 
             </div>
