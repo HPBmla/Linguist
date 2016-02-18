@@ -13,5 +13,5 @@ import java.io.File;
  */
 public interface Preprocessable {
 
-    public File imagePreprocessing(String imageFile);
+    public File imagePreprocessing(String imageFile, String extnsn);
 }

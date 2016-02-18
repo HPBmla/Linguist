@@ -5,7 +5,9 @@
         <group>
             <file>file:/C:/Users/User/Documents/GitHub/Linguist/src/java/com/Linguist/control/UploadServlet.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Linguist/src/java/com/Linguist/model/imageUpload.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Linguist/src/java/com/Linguist/model/sharpeningClass.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Linguist/web/home.jsp</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Linguist/src/java/com/Linguist/model/Preprocessable.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Linguist/src/java/com/Linguist/model/grayscaleClass.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Linguist/web/imageView.jsp</file>
             <file>file:/C:/Users/User/Documents/GitHub/Linguist/src/java/com/Linguist/control/ImagePreprocess.java</file>

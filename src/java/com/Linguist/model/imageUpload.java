@@ -88,10 +88,4 @@ public class imageUpload {
         return flag;
     }
 
-    /*  public boolean anotherImageUpload(InputStream imgStrm, String ext, String name)
-     {
-     boolean flag = false;
-
-
-     }*/
 }

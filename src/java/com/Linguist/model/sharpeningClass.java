@@ -18,7 +18,7 @@ import org.opencv.imgproc.Imgproc;
  */
 public class sharpeningClass implements Preprocessable {
 
-    public File imagePreprocessing(String imgeNme) {
+    public File imagePreprocessing(String imgeNme, String extnsn) {
         int kernelSize = 9;
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         Mat sourceImage = Imgcodecs.imread(imgeNme, Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);

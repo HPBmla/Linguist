@@ -6,6 +6,7 @@
 package com.Linguist.control;
 
 import com.Linguist.model.grayscaleClass;
+import com.Linguist.model.imageUpload;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -55,10 +56,13 @@ public class ImagePreprocess extends HttpServlet {
         PrintWriter out = response.getWriter();
         HttpSession fileNameSession = request.getSession();
         String imageName = (String) fileNameSession.getAttribute("filename");
-        out.print(imageName);
+        // out.print(imageName);
         grayscaleClass grayImage = new grayscaleClass();
+        imageUpload img = new imageUpload();
+        String extn = img.getExtensn(imageName);
         File fileNme = new File(imageName);
-        File outputGrayImage = grayImage.imagePreprocessing(imageName);
+        File outputGrayImage = grayImage.imagePreprocessing(imageName, extn);
+        out.print(outputGrayImage);
         if (outputGrayImage != null) {
             /*   BufferedImage gray = ImageIO.read(fileNme);
              File outImge = new File("grayImage.jpg");
