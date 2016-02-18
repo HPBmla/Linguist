@@ -7,6 +7,7 @@ package com.Linguist.control;
 
 import com.Linguist.model.grayscaleClass;
 import com.Linguist.model.imageUpload;
+import com.Linguist.model.sharpeningClass;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -62,20 +63,19 @@ public class ImagePreprocess extends HttpServlet {
         String extn = img.getExtensn(imageName);
         File fileNme = new File(imageName);
         File outputGrayImage = grayImage.imagePreprocessing(imageName, extn);
-        out.print(outputGrayImage);
-        if (outputGrayImage != null) {
+        String grayImageName = outputGrayImage.getName();
+        sharpeningClass sharpImage = new sharpeningClass();
+        File afterSharpen = sharpImage.imagePreprocessing(grayImageName, "jpg");
+        out.print(afterSharpen);
+        // if (outputGrayImage != null) {
             /*   BufferedImage gray = ImageIO.read(fileNme);
-             File outImge = new File("grayImage.jpg");
-             ImageIO.write(gray, "jpg", outImge);*/
-            out.println("<html><body onload=\"alert('Image uploaded successful')\"></body></html>");
-        } else {
-            out.println("<html><body onload=\"alert('Image not successful')\"></body></html>");
-        }
+         File outImge = new File("grayImage.jpg");
+         ImageIO.write(gray, "jpg", outImge);*/
+        /*     out.println("<html><body onload=\"alert('Image uploaded successful')\"></body></html>");
+         } else {
+         out.println("<html><body onload=\"alert('Image not successful')\"></body></html>");
+         }*/
+
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
 }
