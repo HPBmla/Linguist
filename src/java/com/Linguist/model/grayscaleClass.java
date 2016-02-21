@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Field;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
@@ -28,16 +29,24 @@ public class grayscaleClass implements Preprocessable {
     /**
      *
      * @param image
+     * @param extnsn
      * @return
      */
+    static {
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+    }
+
     @Override
     public File imagePreprocessing(String image, String extnsn) {
+
         BufferedImage bImge = null;
         BufferedImage bImage2 = null;
         File grayscle = null;
+
         try {
+
             // loadOpenCV_Lib();
-            System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+            //String path = "opencv\\build\\java\\x64\\opencv_java300.dll";
             FileInputStream fileName = new FileInputStream("C:\\Users\\User\\Documents\\GitHub\\Linguist\\web\\uploadedImage\\" + image);
             InputStream input = fileName;
             bImge = ImageIO.read(input);
@@ -69,7 +78,7 @@ public class grayscaleClass implements Preprocessable {
             }
             //writing the grayscale image to the folder
             grayscle = new File("C:\\Users\\User\\Documents\\GitHub\\Linguist\\web\\uploadedImage\\grayscale" + "." + extn);
-            ImageIO.write(bImage2, extn, grayscle);
+            ImageIO.write(bImage2, "jpg", grayscle);
         } catch (IOException ex) {
             System.out.println("" + ex.getMessage());
         } catch (Exception ex) {
@@ -79,16 +88,16 @@ public class grayscaleClass implements Preprocessable {
 
     }
 
-    /*  public static void loadOpenCV_Lib() throws Exception {
-     String model = System.getProperty("sun.arch.data.model");
-     String libraryPath = "C:/opencv/build/java/x64/";
-     if (model.equals("64")) {
-     libraryPath = "C:/opencv/build/java/x86/";
-     }
-     System.setProperty("java.library.path", libraryPath);
-     Field sysPath = ClassLoader.class.getDeclaredField("sys_paths");
-     sysPath.setAccessible(true);
-     sysPath.set(null, null);
-     //  System.loadLibrary("opencv_java300");
-     }*/
+    public static void loadOpenCV_Lib() throws Exception {
+        String model = System.getProperty("sun.arch.data.model");
+        String libraryPath = "C:/opencv/build/java/x64/";
+        if (model.equals("64")) {
+            libraryPath = "C:/opencv/build/java/x86/";
+        }
+        System.setProperty("java.library.path", libraryPath);
+        Field sysPath = ClassLoader.class.getDeclaredField("sys_paths");
+        sysPath.setAccessible(true);
+        sysPath.set(null, null);
+        // System.loadLibrary("opencv_java300");
+    }
 }

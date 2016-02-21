@@ -66,13 +66,26 @@ public class imageUpload {
                 case ".jpg":
                     extn = "jpg";
                     break;
+                case ".JPG":
+                    extn = "jpg";
+                    break;
+
                 case ".png":
+                    extn = "png";
+                    break;
+                case ".PNG":
                     extn = "png";
                     break;
                 case ".pdf":
                     extn = "pdf";
                     break;
+                case ".PDF":
+                    extn = "pdf";
+                    break;
                 case ".tiff":
+                    extn = "tif";
+                    break;
+                case ".TIFF":
                     extn = "tif";
                     break;
 
