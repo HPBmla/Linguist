@@ -12,7 +12,6 @@ import com.Linguist.model.sharpeningClass;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import static java.lang.System.out;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -62,7 +61,6 @@ public class ImagePreprocess extends HttpServlet {
             PrintWriter out = response.getWriter();
             HttpSession fileNameSession = request.getSession();
             String imageName = (String) fileNameSession.getAttribute("filename");
-            // out.print(imageName);
             grayscaleClass grayImage = new grayscaleClass();
             imageUpload img = new imageUpload();
             String extn = img.getExtensn(imageName);
@@ -74,39 +72,22 @@ public class ImagePreprocess extends HttpServlet {
             String sharpnName = afterSharpen.getName();
             out.print(afterSharpen);
             AdaptiveThresholdClass adptive = new AdaptiveThresholdClass();
-
             File finlImage = adptive.imagePreprocessing(sharpnName, "jpg");
-            // if (outputGrayImage != null) {
-            /*   BufferedImage gray = ImageIO.read(fileNme);
-             File outImge = new File("grayImage.jpg");
-             ImageIO.write(gray, "jpg", outImge);*/
-            /*     out.println("<html><body onload=\"alert('Image uploaded successful')\"></body></html>");
-             } else {
-             out.println("<html><body onload=\"alert('Image not successful')\"></body></html>");
-             }*/
             out.print("Its thissss");
-            /* TesseractOcr tessInstnce = new TesseractOcr();
-             File image = new File("pink.jpg");
-             String text = tessInstnce.performOcr(image);
-             if (text.isEmpty()) {
-             out.print("null");
-             } else {
-             out.println(text);
-             }*/
-            Tesseract tess = new Tesseract();
-            out.println("calling");
 
-            if (finlImage != null) {
-                out.println("got the image");
-            }
-            String text = tess.doOCR(finlImage);
-            out.println(text);
-            if (text == null) {
-                out.println("null");
-            }
+            /**
+             * * TesseractOcr tessInstnce = new TesseractOcr(); //File filname
+             * = new File(finlImage); // String text =
+             * tessInstnce.performOcr(finlImage); String text =
+             * tessInstnce.performOcr(finlImage); if (text == null) {
+             * out.println("null"); } else { out.println(text); }*
+             */
+            Tesseract ocr = new Tesseract();
+            File image = new File("G:\\pictureBook\\pink.jpg");
+            String txt = ocr.doOCR(image);
+            System.out.println(txt);
         } catch (TesseractException ex) {
-            out.println("wrongg");
+            System.out.println("wronggggg");
         }
     }
-
 }

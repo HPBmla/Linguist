@@ -17,7 +17,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top"><img src=" /img/logo/ViseurLogo.png"  alt="ViseurLogo"/></a>
+                <a class="navbar-brand page-scroll" href="#page-top"><img src=" "  alt="LinguistLogo"/></a>
             </div>
 
             <div class="collapse navbar-collapse " id="nav">

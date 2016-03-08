@@ -20,6 +20,7 @@ import static org.opencv.imgproc.Imgproc.adaptiveThreshold;
  */
 public class AdaptiveThresholdClass implements Preprocessable {
 
+    @Override
     public File imagePreprocessing(String imageFile, String extnsn) {
         //  System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         Mat graySource = imread("C:\\Users\\User\\Documents\\GitHub\\Linguist\\web\\uploadedImage\\" + imageFile, IMREAD_GRAYSCALE);
@@ -31,4 +32,8 @@ public class AdaptiveThresholdClass implements Preprocessable {
         return outputImage;
     }
 
+    /*  public static void main(String argv[]) {
+     System.load("G:\\software\\apache-tomcat-8.0.18-windows-x64\\apache-tomcat-8.0.18\\bin\\win32-x86-64\\libtesseract304.dll");
+     System.out.println("aa");
+     }*/
 }

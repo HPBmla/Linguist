@@ -16,6 +16,7 @@ import net.sourceforge.tess4j.TesseractException;
 public class TesseractOcr {
 
     public String performOcr(File image) {
+
         String extractedTxt = null;
         try {
             Tesseract tess = new Tesseract();
@@ -32,4 +33,16 @@ public class TesseractOcr {
         return extractedTxt;
     }
 
+    /* public static void main(String args[]) {
+     // System.loadLibrary("libtesseract304");
+     File imagineFile = new File("C:\\Users\\User\\Documents\\GitHub\\Linguist\\web\\uploadedImage\\adaptive.jpg");
+     Tesseract instance = new Tesseract();
+     try {
+     String result = instance.doOCR(imagineFile);
+     System.out.println(result);
+     } catch (TesseractException ex) {
+     System.err.println(ex.getMessage());
+
+     }
+     }*/
 }

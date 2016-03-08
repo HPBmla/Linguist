@@ -40,7 +40,8 @@
             </div>
         </div>
         <div id="block" class="row">
-            <h3 class="section-subheading textChanged">Our aim is to expand the community that contributes to innovation and greet new comers with better<br/> options for their future development need Viseur contributes to the existing pool of ideas by  including inputs of unexperienced personal computer users, giving fresh options to software development enthusiasts, and to
+            <h3 class="section-subheading textChanged">
+                Our aim is to expand the community that contributes to innovation and greet new comers with better<br/> options for their future development need Viseur contributes to the existing pool of ideas by  including inputs of unexperienced personal computer users, giving fresh options to software development enthusiasts, and to
                 expand the exposure of entrepreneurs and their ideas by involving the business professionals who are interested in profiting through good investments.
             </h3>
         </div>
